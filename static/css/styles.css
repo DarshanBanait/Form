@@ -1,0 +1,117 @@
+/* General styling for the form */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Form container styling */
+form {
+    max-width: 800px; /* Adjusted width to accommodate grid */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styling */
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Input and select styling */
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Submit button styling */
+form input[type="submit"], form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Hover effect for buttons */
+form input[type="submit"]:hover, form button:hover {
+    background-color: #45a049;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Styling for checkboxes and radio buttons */
+form input[type="checkbox"], form input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Checkbox group styling */
+form .checkbox-group {
+    margin-top: 10px;
+}
+
+/* File input styling */
+form .file-input {
+    margin-top: 10px;
+}
+
+/* Section headers styling */
+section {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+/* Section header styling */
+section h2 {
+    color: #333;
+    font-size: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Grid layout for multiple choice questions */
+.question-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust number of columns as needed */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.question-grid label {
+    grid-column: span 1;
+    display: block;
+    text-align: center; /* Center-align text within grid cells */
+}
+
+.question-grid .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-grid .form-group label {
+    margin-top: 0; /* Remove top margin for labels within grid */
+}

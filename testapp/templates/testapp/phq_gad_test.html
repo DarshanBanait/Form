@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHQ-9 and GAD-7 Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .question-grid label {
+            grid-column: span 4;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>PHQ-9 and GAD-7 Form</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <!-- Section 1: User Information -->
+        <section>
+            <h2>User Information</h2>
+            <div class="form-group">
+                {{ form.name.label_tag }} {{ form.name }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label_tag }} {{ form.email }}
+            </div>
+            <div class="form-group">
+                {{ form.gender.label_tag }} {{ form.gender }}
+            </div>
+            <div class="form-group">
+                {{ form.age.label_tag }} {{ form.age }}
+            </div>
+            <div class="form-group">
+                {{ form.devices_used.label_tag }} {{ form.devices_used }}
+            </div>
+            <div class="form-group">
+                {{ form.app_types.label_tag }} {{ form.app_types }}
+            </div>
+            <div class="form-group">
+                {{ form.main_screen_time_contributor.label_tag }} {{ form.main_screen_time_contributor }}
+            </div>
+            <div class="form-group">
+                {{ form.screen_time_screenshot.label_tag }} {{ form.screen_time_screenshot }}
+            </div>
+        </section>
+
+        <!-- Section 2: PHQ-9 (Depression) -->
+        <section>
+            <h2>PHQ-9 (Depression)</h2>
+            <div class="form-group">
+                {{ form.phq_scale_description.label_tag }} {{ form.phq_scale_description }}
+            </div>
+            <div class="question-grid">
+                <div>{{ form.phq_question_1.label_tag }} {{ form.phq_question_1 }}</div>
+                <div>{{ form.phq_question_2.label_tag }} {{ form.phq_question_2 }}</div>
+                <div>{{ form.phq_question_3.label_tag }} {{ form.phq_question_3 }}</div>
+                <div>{{ form.phq_question_4.label_tag }} {{ form.phq_question_4 }}</div>
+                <div>{{ form.phq_question_5.label_tag }} {{ form.phq_question_5 }}</div>
+                <div>{{ form.phq_question_6.label_tag }} {{ form.phq_question_6 }}</div>
+                <div>{{ form.phq_question_7.label_tag }} {{ form.phq_question_7 }}</div>
+                <div>{{ form.phq_question_8.label_tag }} {{ form.phq_question_8 }}</div>
+                <div>{{ form.phq_question_9.label_tag }} {{ form.phq_question_9 }}</div>
+            </div>
+        </section>
+
+        <!-- Section 3: GAD-7 (Anxiety) -->
+        <section>
+            <h2>GAD-7 (Anxiety)</h2>
+            <div class="form-group">
+                {{ form.gad_scale_description.label_tag }} {{ form.gad_scale_description }}
+            </div>
+            <div class="question-grid">
+                <div>{{ form.gad_question_1.label_tag }} {{ form.gad_question_1 }}</div>
+                <div>{{ form.gad_question_2.label_tag }} {{ form.gad_question_2 }}</div>
+                <div>{{ form.gad_question_3.label_tag }} {{ form.gad_question_3 }}</div>
+                <div>{{ form.gad_question_4.label_tag }} {{ form.gad_question_4 }}</div>
+                <div>{{ form.gad_question_5.label_tag }} {{ form.gad_question_5 }}</div>
+                <div>{{ form.gad_question_6.label_tag }} {{ form.gad_question_6 }}</div>
+                <div>{{ form.gad_question_7.label_tag }} {{ form.gad_question_7 }}</div>
+            </div>
+        </section>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
