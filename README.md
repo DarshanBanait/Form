@@ -3,6 +3,8 @@
 
 Welcome to the Form repository! This project is designed to collect data and perform the PHQ-9 test for depression and GAD-7 test for anxiety. It provides users with immediate feedback on their scores after completing the forms. The collected data will also be analyzed to explore correlations and patterns between screen time and mental health indicators such as anxiety and depression.
 
+For now, you can fill up the [Google Form](https://forms.gle/Fir6BtZzeEtTnAGs7)
+
 ## Features
 
 - **User Data Collection:** Collects basic user information and screen time details.
